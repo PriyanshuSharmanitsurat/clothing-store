@@ -1,4 +1,6 @@
 import React from "react"; // ✅ Required for JSX
+import Footer from "../component/Footer";
+import Navbar from "../component/Navbar";
 
 const Home = () => {
   const products = [
@@ -73,7 +75,9 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+          <Navbar />
       {/* ✅ Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white py-20 px-6">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -231,25 +235,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ✅ Newsletter Section */}
-      <section className="py-16 px-6 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
-          <p className="text-xl mb-8 text-gray-300">
-            Subscribe to our newsletter and be the first to know about new arrivals and exclusive offers
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
-            />
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
+      
+      <Footer/>
     </div>
   );
 };
